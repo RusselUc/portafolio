@@ -7,9 +7,12 @@ const Aboutme = () => {
       className="flex min-h-screen items-center justify-center transition-all duration-500 dark:bg-gray-800"
       id="aboutme"
     >
-      <div className="container md:flex md:flex-row bg-gray-900 p-10 dark:bg-gray-300 rounded-3xl mx-10">
-        <div className="mt-8 flex items-center justify-center">
-          <img className="" src={image} />
+      <div className="container mx-10 rounded-3xl bg-gray-900 p-10 dark:bg-gray-300 md:flex md:flex-row">
+        <div className=" md:h-full mt-8 flex h-36 w-52 items-center justify-center md:w-1/2">
+          <img
+            className="object-cover transition-all duration-500 "
+            src={image}
+          />
         </div>
         <div className="flex flex-col justify-center">
           <h1 className="text-center text-3xl font-bold text-white dark:text-black">
