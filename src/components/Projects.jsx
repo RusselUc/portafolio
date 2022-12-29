@@ -1,6 +1,7 @@
 import React from "react";
 import IconReact from "../assets/Icons/IconReact";
 import IconTailwind from "../assets/Icons/IconTailwind";
+import IconVite from "../assets/Icons/IconVite";
 import todo from "../assets/image/TODO.png";
 import Card from "./Card";
 
@@ -21,6 +22,7 @@ const Projects = () => {
           demo="https://todo-react-vite-tailwind-russel-uc.netlify.app/"
           repo="https://github.com/RusselUc/ToDo"
         >
+          <IconVite />
           <IconReact />
           <IconTailwind />
         </Card>
