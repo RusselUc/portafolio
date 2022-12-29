@@ -4,14 +4,21 @@ import { DarkModeContext } from "../context/DarkModeProvider";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+  const { darkMode, setDarkMode, setContacme } = useContext(DarkModeContext);
 
   const urls = [
     { name: "Inicio", uri: "home" },
     { name: "Sobre mi", uri: "aboutme" },
     { name: "Proyectos", uri: "projects" },
-    { name: "Contacto", uri: "" },
+    { name: "Contacto", uri: "home" },
   ];
+
+  const handleClick = (name) => {
+    if(name === "Contacto"){
+      setContacme(true)
+    }
+    setOpen(false)
+  }
 
   useEffect(() => {
     let elemento = document.getElementById("theme")
@@ -64,7 +71,7 @@ const Navbar = () => {
                 offset={50}
                 duration={500}
                 className="cursor-pointer text-gray-800  hover:text-gray-400 dark:text-gray-300 dark:hover:text-white"
-                onClick={() => setOpen(false)}
+                onClick={() => handleClick(url.name)}
               >
                 <span>{url.name}</span>
               </Link>
