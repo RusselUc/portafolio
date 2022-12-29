@@ -20,7 +20,7 @@ const Home = () => {
           <p className="mt-8 text-xl dark:text-gray-300">
             Desarrollador junior
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 ">
             <Button
               text="Contactame"
               icon="send-outline"

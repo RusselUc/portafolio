@@ -8,7 +8,7 @@ const Button = ({text, icon, href, target, onClick}) => {
         target={target}
         onClick={onClick}
         >
-      <span className="text-white dark:text-gray-300">{text}</span>
+      <span className="text-white dark:text-gray-300 ">{text}</span>
       <span className="flex items-center justify-center text-white dark:text-gray-300">
         <ion-icon name={icon}></ion-icon>
       </span>

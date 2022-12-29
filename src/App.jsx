@@ -6,6 +6,7 @@ import Aboutme from "./components/Aboutme";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 import DarkModeProvider from "./context/DarkModeProvider";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Navbar />
       <Home />
       <Aboutme />
+      <Skills/>
       <Projects />
       <footer className="flex items-center justify-center text-center transition-all duration-500 ease-in dark:bg-gray-800 dark:text-gray-300">
         Hecho con
