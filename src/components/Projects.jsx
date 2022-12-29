@@ -6,7 +6,10 @@ import Card from "./Card";
 
 const Projects = () => {
   return (
-    <div className="pt-5 pb-5 dark:bg-gray-800" id="projects">
+    <div
+      className="pt-5 pb-5 transition-all duration-500 ease-in dark:bg-gray-800"
+      id="projects"
+    >
       <div className=" flex min-h-screen w-full flex-col flex-wrap items-center justify-center gap-4">
         <>
           <h2 className="text-3xl font-bold dark:text-gray-300">Proyectos</h2>
