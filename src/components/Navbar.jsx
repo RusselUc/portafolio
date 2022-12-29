@@ -4,7 +4,7 @@ import { DarkModeContext } from "../context/DarkModeProvider";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const {darkMode, setDarkMode} = useContext(DarkModeContext)
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
   const urls = [
     { name: "Inicio", uri: "home" },
@@ -14,17 +14,20 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
+    let elemento = document.getElementById("theme")
     if (darkMode) {
       document.documentElement.classList.add("dark");
-      console.log(darkMode);
+      elemento.setAttribute("content", "#1F2937");
+      localStorage.setItem('theme', 'dark')
     } else {
       document.documentElement.classList.remove("dark");
-      console.log(darkMode);
+      elemento.setAttribute("content", "#FFF");
+      localStorage.setItem('theme', 'light')
     }
   }, [darkMode]);
 
   return (
-    <div className="fixed top-0 left-0 w-full shadow-md bg-white dark:bg-gray-800 transition-all duration-500">
+    <div className="fixed top-0 left-0 w-full bg-white shadow-md transition-all duration-500 dark:bg-gray-800">
       <div className="py-4 px-7 transition-all duration-500 ease-in dark:bg-gray-800  md:flex md:justify-between md:px-10">
         <div className="flex items-center gap-4 text-2xl font-bold text-gray-800 md:cursor-pointer">
           <span
@@ -42,8 +45,8 @@ const Navbar = () => {
           </span>
         </div>
         <ul
-          className={`absolute bg-white dark:bg-gray-800 md:bg-transparent md:dark:bg-transparent left-0 w-full pb-12 pl-9 transition-all duration-500 ease-in
-          md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0  md:pl-0 ${
+          className={`absolute left-0 w-full bg-white pb-12 pl-9 transition-all duration-500 ease-in dark:bg-gray-800 md:static md:z-auto
+          md:flex md:w-auto md:items-center md:bg-transparent md:pb-0 md:pl-0  md:dark:bg-transparent ${
             open
               ? "top-20 opacity-100"
               : "top-[-490px] opacity-0 md:opacity-100"

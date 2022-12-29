@@ -2,6 +2,7 @@ import React from 'react'
 import Aboutme from './components/Aboutme'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
+import Projects from './components/Projects'
 import DarkModeProvider from './context/DarkModeProvider'
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
       <Navbar/>
       <Home/>
       <Aboutme/>
+      <Projects/>
     </DarkModeProvider>
   )
 }

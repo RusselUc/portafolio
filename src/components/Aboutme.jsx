@@ -7,8 +7,11 @@ const Aboutme = () => {
       className="flex min-h-screen items-center justify-center transition-all duration-500 dark:bg-gray-800"
       id="aboutme"
     >
-      <div className="container mx-10 rounded-3xl bg-gray-900 p-10 dark:bg-gray-300 md:flex md:flex-row">
-        <div className=" md:h-full mt-8 flex h-36 w-52 items-center justify-center md:w-1/2">
+      <div
+        className="container mx-10 rounded-3xl bg-gray-900 p-10 flex flex-col justify-center items-center dark:bg-gray-300
+            md:flex md:flex-col md:items-center md:justify-center md:gap-4 lg:flex-row"
+      >
+        <div className=" mt-8 flex h-36 w-52 items-center justify-center md:h-full md:w-1/2">
           <img
             className="object-cover transition-all duration-500 "
             src={image}
