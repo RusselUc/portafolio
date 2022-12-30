@@ -51,3 +51,11 @@ export const ProjectsData = {
         code: "Code"
     },
 }
+
+export const FooterData = {
+    es: {
+        text: "Hecho con"
+    },
+
+    en: { text: "Build with" }
+}

@@ -11,15 +11,20 @@ import IconBoostrap from "../assets/Icons/IconBoostrap";
 import { DarkModeContext } from "../context/DarkModeProvider";
 
 const Skills = () => {
-  const { lenguage } = useContext(DarkModeContext)
+  const { lenguage } = useContext(DarkModeContext);
   return (
     <div className="flex h-full items-center justify-center transition-all duration-500 ease-in dark:bg-gray-800">
-      <div className="container mx-10 flex flex-col items-center justify-center rounded-3xl bg-gray-200 p-5 transition-all duration-500 ease-in dark:bg-gray-300">
+      <div className="container mx-10 flex flex-col items-center justify-center rounded-3xl bg-gray-200 transition-all duration-500 ease-in dark:bg-gray-300">
+        <div className="flex min-w-full gap-2 py-3 pl-4">
+          <span className="top-0 left-0 flex h-3 w-3 rounded-full bg-red-500"></span>
+          <span className="top-0 left-0 flex h-3 w-3 rounded-full bg-yellow-500"></span>
+          <span className="top-0 left-0 flex h-3 w-3 rounded-full bg-green-500"></span>
+        </div>
         <h2 className="mt-8 text-center text-3xl font-bold text-black">
-          { lenguage ? "Skills" : "Habilidades" }
+          {lenguage ? "Skills" : "Habilidades"}
         </h2>
-        <div className="mt-8 flex justify-center items-center flex-wrap gap-8">
-          <span className="transit flex h-1 mb-12 w-14 duration-300 ease-in hover:-translate-y-2 hover:shadow-2xl">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-8 p-5">
+          <span className="transit mb-12 flex h-1 w-14 duration-300 ease-in hover:-translate-y-2 hover:shadow-2xl">
             <IconJavaScript />
             {/* <span className="hover:block">JavaScript</span> */}
           </span>
