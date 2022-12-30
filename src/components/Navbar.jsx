@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { DarkModeContext } from "../context/DarkModeProvider";
+import { NavbarData } from "../utils/Data";
 
 const Navbar = () => {
+  const { es, en } = NavbarData;
   const [open, setOpen] = useState(false);
-  const { darkMode, setDarkMode, setContacme } = useContext(DarkModeContext);
+  const { darkMode, setDarkMode, setContacme, lenguage, setLenguage } =
+    useContext(DarkModeContext);
 
   const urls = [
     { name: "Inicio", uri: "home" },
@@ -14,22 +17,26 @@ const Navbar = () => {
   ];
 
   const handleClick = (name) => {
-    if(name === "Contacto"){
-      setContacme(true)
+    if (name === "Contacto" || name === "Contact") {
+      setContacme(true);
     }
-    setOpen(false)
-  }
+    setOpen(false);
+  };
+
+  const handleLenguage = () => {
+    setLenguage(!lenguage);
+  };
 
   useEffect(() => {
-    let elemento = document.getElementById("theme")
+    let elemento = document.getElementById("theme");
     if (darkMode) {
       document.documentElement.classList.add("dark");
       elemento.setAttribute("content", "#1F2937");
-      localStorage.setItem('theme', 'dark')
+      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
       elemento.setAttribute("content", "#FFF");
-      localStorage.setItem('theme', 'light')
+      localStorage.setItem("theme", "light");
     }
   }, [darkMode]);
 
@@ -45,6 +52,12 @@ const Navbar = () => {
               name={darkMode ? "sunny-outline" : "moon-outline"}
             ></ion-icon>
           </span>
+          <button
+            className="dark:text-gray-300"
+            onClick={() => handleLenguage()}
+          >
+            {lenguage ? "En" : "Es"}
+          </button>
         </div>
         <div className="absolute right-8 top-6 flex gap-4 text-3xl dark:text-gray-300 md:top-8 md:hidden md:cursor-pointer">
           <span onClick={() => setOpen(!open)}>
@@ -59,7 +72,7 @@ const Navbar = () => {
               : "top-[-490px] opacity-0 md:opacity-100"
           }`}
         >
-          {urls.map((url) => (
+          {urls.map((url, index) => (
             <li
               key={url.name}
               className="my-5 text-xl dark:text-gray-300 md:my-0 md:ml-8"
@@ -73,7 +86,7 @@ const Navbar = () => {
                 className="cursor-pointer text-gray-800  hover:text-gray-400 dark:text-gray-300 dark:hover:text-white"
                 onClick={() => handleClick(url.name)}
               >
-                <span>{url.name}</span>
+                <span>{lenguage ? en[index] : es[index]}</span>
               </Link>
             </li>
           ))}

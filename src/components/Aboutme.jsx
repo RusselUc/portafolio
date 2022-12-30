@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import image from "../assets/image/home.svg";
-import Skills from "./Skills";
+import { DarkModeContext } from "../context/DarkModeProvider";
+import { AboutMeData } from "../utils/Data";
 
 const Aboutme = () => {
+  const { es, en } = AboutMeData;
+  const { lenguage } = useContext(DarkModeContext);
   return (
     <div
       className="flex min-h-screen items-center justify-center transition-all duration-500 ease-in dark:bg-gray-800"
@@ -20,17 +23,13 @@ const Aboutme = () => {
         </div>
         <div className="flex flex-col justify-center">
           <h1 className="text-center text-3xl font-bold text-gray-300 dark:text-black">
-            Sobre Mí
+            {lenguage ? en.title : es.title}
           </h1>
           <p className="mt-8 text-justify text-gray-300 dark:text-black">
-            Estudiante de último semestre en ingeniería sistemas
-            computacionales, con gran interés en acceder al mercado laboral para
-            poner en práctica mis conocimientos.
+            {lenguage ? en.p1 : es.p1}
           </p>
-          <p className="mt-8 text-justify text-white dark:text-black">
-            Soy trabajador, comunicativo, comprometido y dedicado a mejorar mis
-            habilidades a través del aprendizaje práctico y el trabajo de
-            desarrollo.
+          <p className="mt-8 text-justify text-gray-300 dark:text-black">
+            {lenguage ? en.p2 : es.p2}
           </p>
         </div>
       </div>

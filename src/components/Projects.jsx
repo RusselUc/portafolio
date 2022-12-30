@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import IconReact from "../assets/Icons/IconReact";
 import IconTailwind from "../assets/Icons/IconTailwind";
 import IconVite from "../assets/Icons/IconVite";
 import todo from "../assets/image/TODO.png";
+import { DarkModeContext } from "../context/DarkModeProvider";
+import { ProjectsData } from "../utils/Data";
 import Card from "./Card";
 
 const Projects = () => {
+    const { es, en } = ProjectsData
+    const { lenguage } = useContext(DarkModeContext)
   return (
     <div
       className="pt-5 pb-5 transition-all duration-500 ease-in dark:bg-gray-800"
@@ -13,11 +17,13 @@ const Projects = () => {
     >
       <div className=" flex min-h-screen w-full flex-col flex-wrap items-center justify-center gap-4">
         <>
-          <h2 className="text-3xl font-bold dark:text-gray-300">Proyectos</h2>
+          <h2 className="text-3xl font-bold dark:text-gray-300">
+            { lenguage ? en.title : es.title }
+          </h2>
         </>
         <Card
           image={todo}
-          text="To-Do List, es un proyecto para el ordamiento de tareas."
+          text={ lenguage ? en.project1.text : es.project1.text}
           title="To-Do List"
           demo="https://todo-react-vite-tailwind-russel-uc.netlify.app/"
           repo="https://github.com/RusselUc/ToDo"

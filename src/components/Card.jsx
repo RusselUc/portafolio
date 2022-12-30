@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DarkModeContext } from "../context/DarkModeProvider";
+import { ProjectsData } from "../utils/Data";
 
 const Card = ({ children, image, text, title, demo, repo }) => {
+  const { lenguage } = useContext(DarkModeContext);
+  const { es, en } = ProjectsData;
   return (
     <div>
       <div className="mt-8 flex w-60 flex-col items-center justify-center rounded-xl border bg-white p-2 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:border-gray-500 dark:bg-gray-400">
@@ -28,7 +32,7 @@ const Card = ({ children, image, text, title, demo, repo }) => {
             href={repo}
             target="_blank"
           >
-            Repositorio
+            { lenguage ? en.code : es.code}
           </a>
         </div>
       </div>

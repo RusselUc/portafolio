@@ -7,9 +7,10 @@ const initialStateDarkMode = localStorage.getItem("theme") === "dark";
 const DarkModeProvider = (props) => {
   const [darkMode, setDarkMode] = useState(initialStateDarkMode);
   const [contacme, setContacme] = useState(false);
+  const [lenguage, setLenguage] = useState(false);
   return (
     <DarkModeContext.Provider
-      value={{darkMode, setDarkMode, contacme, setContacme}}>
+      value={{darkMode, setDarkMode, contacme, setContacme, lenguage, setLenguage}}>
         {props.children}
     </DarkModeContext.Provider>
   )
