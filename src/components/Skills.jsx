@@ -9,6 +9,7 @@ import IconJavaScript from "../assets/Icons/IconJavaScript";
 import IconHtml from "../assets/Icons/IconHtml";
 import IconBoostrap from "../assets/Icons/IconBoostrap";
 import { DarkModeContext } from "../context/DarkModeProvider";
+import IconMySQL from "../assets/Icons/IconMySQL";
 
 const Skills = () => {
   const { lenguage } = useContext(DarkModeContext);
@@ -45,6 +46,9 @@ const Skills = () => {
           </span>
           <span className="transit duration-300 ease-in hover:-translate-y-2 hover:shadow-2xl">
             <IconBoostrap />
+          </span>
+          <span className="transit duration-300 ease-in hover:-translate-y-2 hover:shadow-2xl">
+            <IconMySQL />
           </span>
           <span className="transit duration-300 ease-in hover:-translate-y-2 hover:shadow-2xl">
             <IconFirestore />

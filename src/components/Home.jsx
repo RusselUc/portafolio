@@ -9,6 +9,8 @@ const Home = () => {
   const { darkMode, contacme, setContacme, lenguage } =
     useContext(DarkModeContext);
   const { es, en } = HomeData;
+  const cvEn = "https://drive.google.com/file/d/1fjgwkkKaSJ1QgGtZqgg-kcXRdRfG1ABG/view?usp=sharing"
+  const cvEs = "https://drive.google.com/file/d/1WMzlUczWlMioX77Lr9U4piwD9NbrkOdq/view?usp=share_link"
   return (
     <div
       className="flex min-h-screen items-center justify-center transition-all duration-500 ease-in dark:bg-gray-800"
@@ -31,7 +33,7 @@ const Home = () => {
             <Button
               text={lenguage ? en.cv : es.cv}
               icon="document-outline"
-              href="https://drive.google.com/file/d/1Tz9Huqw5BMRU0xeB1FRRc2vhAoiCD44-/view?usp=share_link"
+              href={ lenguage ? cvEn : cvEs}
               target="_blank"
             />
           </div>
