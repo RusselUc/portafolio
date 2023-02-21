@@ -12,13 +12,13 @@ export const NavbarData = {
 export const HomeData = {
     es: {
         title: "!Hola!, soy Russel",
-        subtitle: "Desarrollador junior",
+        subtitle: "Desarrollador Web Junior",
         contact: "Contactame",
         cv: "Descargar CV"
     },
     en: {
         title: "Hi!, I'm Russel",
-        subtitle: "Junior developer",
+        subtitle: "Junior Web developer",
         contact: "Contact me",
         cv: "Download CV"
     }

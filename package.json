@@ -9,9 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "fusioncharts": "^3.19.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scroll": "^1.8.9"
+    "react-fusioncharts": "^4.0.0",
+    "react-scroll": "^1.8.9",
+    "recharts": "^2.4.3"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

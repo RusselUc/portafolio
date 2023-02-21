@@ -17,7 +17,7 @@ const App = () => {
       <Aboutme />
       <Skills />
       <Projects />
-      <footer className="flex items-center justify-center text-center transition-all duration-500 ease-in dark:bg-gray-800 dark:text-gray-300">
+      <footer className="bg-[#F6F8FF] flex items-center justify-center text-center transition-all duration-500 ease-in dark:bg-[#141D2F] dark:text-gray-300">
         Build with
         <span className="mx-2 flex h-12 w-12">
           <IconVite />

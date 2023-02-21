@@ -8,10 +8,10 @@ const Aboutme = () => {
   const { lenguage } = useContext(DarkModeContext);
   return (
     <div
-      className="flex min-h-screen items-center justify-center transition-all duration-500 ease-in dark:bg-gray-800"
+      className="flex bg-[#F6F8FF] min-h-screen items-center justify-center transition-all duration-500 ease-in dark:bg-[#141D2F]"
       id="aboutme"
     >
-      <div className="container mx-10 flex flex-col  rounded-3xl bg-gray-900 dark:bg-gray-300">
+      <div className="container mx-10 flex flex-col  rounded-3xl bg-[#FEFEFE] shadow-lg dark:bg-[#1E2A47] dark:shadow-lg dark:shadow-blue-500/20">
         <div className="flex min-w-full gap-2 py-3 pl-4">
           <span className="top-0 left-0 flex h-3 w-3 rounded-full bg-red-500"></span>
           <span className="top-0 left-0 flex h-3 w-3 rounded-full bg-yellow-500"></span>
@@ -26,13 +26,13 @@ const Aboutme = () => {
             />
           </div>
           <div className="flex flex-col justify-center">
-            <h1 className="text-center text-3xl font-bold text-gray-300 dark:text-black">
+            <h1 className="text-center text-3xl font-bold text-[#697C9A] dark:text-gray-200">
               {lenguage ? en.title : es.title}
             </h1>
-            <p className="mt-8 text-justify text-gray-300 dark:text-black">
+            <p className="mt-8 text-justify text-[#697C9A] dark:text-gray-300">
               {lenguage ? en.p1 : es.p1}
             </p>
-            <p className="mt-8 text-justify text-gray-300 dark:text-black">
+            <p className="mt-8 text-justify text-[#697C9A] dark:text-gray-300">
               {lenguage ? en.p2 : es.p2}
             </p>
           </div>
