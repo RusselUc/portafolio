@@ -14,7 +14,7 @@ const Home = () => {
   const [dataProfile, setDataProfile] = useState(null);
   const [repos, setRepos] = useState([]);
 
-  const [labels, setLabels] = useState([])
+  const [labels, setLabels] = useState([]);
   // const [data, setData] = useState([])
 
   const cvEn =
@@ -55,7 +55,7 @@ const Home = () => {
     .slice(0, 5);
 
   const data = {
-    labels:  mostUsed.map((item) => item.name),
+    labels: mostUsed.map((item) => item.name),
     datasets: [
       {
         label: "used",
@@ -90,7 +90,7 @@ const Home = () => {
       className="mt-14 flex min-h-screen w-full items-center justify-center bg-[#F6F8FF] transition-all duration-500 ease-in dark:bg-[#141D2F]"
       id="home"
     >
-      <div className="w-full mx-10 flex flex-col items-center justify-center md:flex-row">
+      <div className="mx-10 flex w-full flex-col items-center justify-center md:flex-row">
         <div className="flex flex-col items-center justify-center lg:w-1/2">
           <h1 className="mt-10 text-center text-4xl font-semibold tracking-widest text-[#4B6A9B] dark:text-gray-300">
             {lenguage ? en.title : es.title}
@@ -107,11 +107,11 @@ const Home = () => {
           />
         </div>
 
-        <div className="m-10 flex w-full lg:w-1/2 flex-wrap justify-center rounded-2xl bg-white shadow-lg dark:bg-[#1E2A47] dark:shadow-lg dark:shadow-blue-500/20">
+        <div className="m-10 flex w-full flex-wrap justify-center rounded-2xl bg-white shadow-lg dark:bg-[#1E2A47] dark:shadow-lg dark:shadow-blue-500/20 lg:w-1/2">
           {dataProfile && (
             <div className="flex w-full flex-col">
               <span className="mt-6 text-center font-semibold dark:text-gray-200">
-                {lenguage ? 'GitHub information' : 'Información de GitHub'}
+                {lenguage ? "GitHub information" : "Información de GitHub"}
               </span>
               <div className="m-5 flex flex-wrap lg:flex-col">
                 <div className="flex">
@@ -168,8 +168,11 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col items-center justify-center lg:absolute md:right-0 lg:right-16 xl:right-52 md:top-[350px]">
-                <span className="mb-4 text-[#4b6a9b] dark:text-gray-200"> {lenguage ? 'Most used lenguagues': 'Lenguajes más usados'}</span>
+              <div className="flex flex-col items-center justify-center lg:absolute lg:right-28 lg:top-1/3 xl:top-1/3 2xl:right-52 2xl:top-[350px]">
+                <span className="mb-4 text-[#4b6a9b] dark:text-gray-200">
+                  {" "}
+                  {lenguage ? "Most used lenguagues" : "Lenguajes más usados"}
+                </span>
                 <div className="w-52">
                   <Pie data={data} />
                 </div>
@@ -198,7 +201,6 @@ const Home = () => {
               </div>
             </div>
           )}
-
         </div>
       </div>
     </div>
