@@ -27,12 +27,12 @@ export const HomeData = {
 export const AboutMeData = {
     es: {
         title: "Sobre mí",
-        p1: "Estudiante de último semestre de ingeniería en sistemas computacionales, con gran interés en acceder al mercado laboral para poner en práctica mis conocimientos.",
+        p1: "Me gusta mucho el desarrollo web y el desarrollo movíl así como el aprender nuevas tecnologías.",
         p2: "Soy trabajador, comunicativo, comprometido y dedicado a mejorar mis habilidades a través del aprendizaje práctico y el trabajo de desarrollo."
     },
     en: {
         title: "About me",
-        p1: "Last semester student of computer systems engineering, with great interest in accessing the labor market to put my knowledge into practice.",
+        p1: "I like very much the web development and mobile development, so as, to learn new technologies",
         p2: "I am a working person, communicative, committed and dedicated to improving skills through hands-on learning and development work."
     }
 }
