@@ -26,7 +26,6 @@ const Home = () => {
     const response = await fetch(`https://api.github.com/users/RusselUc`);
     const data = await response.json();
 
-    console.log(data);
 
     const responseRepos = await fetch(data.repos_url);
     const repos = await responseRepos.json();
