@@ -7,7 +7,7 @@ const Card = ({ children, image, text, title, demo, repo }) => {
   const { es, en } = ProjectsData;
   return (
     <div>
-      <div className="mt-8 flex w-60 flex-col items-center justify-center rounded-xl border bg-white p-2 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-none dark:bg-[#1E2A47] dark:shadow-lg dark:shadow-blue-500/20 dark:hover:shadow-2xl dark:hover:shadow-blue-500/25">
+      <div className="mt-8 flex w-60  flex-col items-center justify-center rounded-xl border bg-white p-2 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-none dark:bg-[#1E2A47] dark:shadow-lg dark:shadow-blue-500/20 dark:hover:shadow-2xl dark:hover:shadow-blue-500/25">
         <div className="flex items-center justify-center">
           <img className="h-40 rounded-xl object-cover" src={image} alt="" />
         </div>

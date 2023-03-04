@@ -1,6 +1,6 @@
-const IconTailwindColor = () => {
+const IconTailwindColor = ({width, height}) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height}  viewBox="0 0 64 64">
       <defs>
         <linearGradient
           x1="0"

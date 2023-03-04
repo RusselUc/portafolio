@@ -1,10 +1,10 @@
-const IconFirestore = () => {
+const IconFirestore = ({width, height}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      height="64"
+      height={height}
       viewBox="0 0 32 32"
-      width="64"
+      width={width}
     >
       <path
         d="M19.62 11.558l-3.203 2.98-2.972-5.995 1.538-3.448c.4-.7 1.024-.692 1.414 0z"

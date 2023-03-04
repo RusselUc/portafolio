@@ -43,11 +43,19 @@ export const ProjectsData = {
         project1: {
             text: "To-Do List, app diseñada para el listado de tareas."
         },
+        project2: {
+            text: "Github user search, Consumo de la API de github con la cual puede buscar distintos usuarios."
+        },
+        project3: {
+            text: "Chat with Firebase, Chat en tiempo real que se almacena en firebase"
+        },
         code: "Código"
     },
     en: {
         title: "Projects",
         project1: { text: "To-Do List, app designed for the list of tasks." },
+        project2: { text: "Github user search, Consumption of the github API with which you can search for different users." },
+        project3: { text: "Chat with Firebase, Real time chat that is stored in firebase" },
         code: "Code"
     },
 }

@@ -35,10 +35,10 @@ const Skills = () => {
             <IconHtml />
           </span>
           <span className="transit duration-300 ease-in hover:-translate-y-2 hover:shadow-2xl">
-            <IconReactColor />
+            <IconReactColor width={"64"}/>
           </span>
           <span className="transit duration-300 ease-in hover:-translate-y-2 hover:shadow-2xl">
-            <IconTailwindColor />
+            <IconTailwindColor width={"64"}/>
           </span>
           <span className="transit duration-300 ease-in hover:-translate-y-2 hover:shadow-2xl">
             <IconBoostrap />
@@ -47,7 +47,7 @@ const Skills = () => {
             <IconMySQL />
           </span>
           <span className="transit duration-300 ease-in hover:-translate-y-2 hover:shadow-2xl">
-            <IconFirestore />
+            <IconFirestore width={"64"}/>
           </span>
           <span className="transit duration-300 ease-in hover:-translate-y-2 hover:shadow-2xl">
             <IconGit />

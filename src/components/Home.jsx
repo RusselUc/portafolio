@@ -168,9 +168,8 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col items-center justify-center lg:absolute lg:right-28 lg:top-1/3 xl:top-1/3 2xl:right-52 2xl:top-[350px]">
+              <div className="flex flex-col items-center lg:absolute lg:right-28 lg:top-1/3 xl:top-1/3 2xl:right-52 2xl:top-[350px]">
                 <span className="mb-4 text-[#4b6a9b] dark:text-gray-200">
-                  {" "}
                   {lenguage ? "Most used lenguagues" : "Lenguajes más usados"}
                 </span>
                 <div className="w-52">

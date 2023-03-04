@@ -1,9 +1,9 @@
-const IconReactColor = () => {
+const IconReactColor = ({width, height}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="64"
-      height="64"
+      width={width}
+      height={height}
       viewBox="0 0 32 32"
     >
       <g
