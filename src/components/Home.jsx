@@ -26,7 +26,6 @@ const Home = () => {
     const response = await fetch(`https://api.github.com/users/RusselUc`);
     const data = await response.json();
 
-
     const responseRepos = await fetch(data.repos_url);
     const repos = await responseRepos.json();
     setDataProfile(data);
@@ -89,6 +88,7 @@ const Home = () => {
       className="mt-14 flex min-h-screen w-full items-center justify-center bg-[#F6F8FF] transition-all duration-500 ease-in dark:bg-[#141D2F]"
       id="home"
     >
+
       <div className="mx-10 flex w-full flex-col items-center justify-center md:flex-row">
         <div className="flex flex-col items-center justify-center lg:w-1/2">
           <h1 className="mt-10 text-center text-4xl font-semibold tracking-widest text-[#4B6A9B] dark:text-gray-300">
@@ -104,6 +104,31 @@ const Home = () => {
             href={lenguage ? cvEn : cvEs}
             target="_blank"
           />
+
+          <div
+            className={`mt-8 flex flex-row justify-center transition-all duration-500 ease-in-out`}
+          >
+            <div className="flex flex-row gap-4 transition-all duration-500 ease-in">
+              <span className="w-12 text-3xl text-[#4b6a9b] dark:text-gray-300">
+                <a href="mailto:russelarielucpuc@gmail.com">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </a>
+              </span>
+              {/* <span className="text-md dark:text-gray-300">
+                  russelarielucpuc@gmail.com
+                </span> */}
+            </div>
+
+            <a
+              className="flex items-center justify-start gap-4 overflow-hidden transition-all duration-500"
+              href="https://www.linkedin.com/in/russel-ariel-uc-puc/"
+              target="_blank"
+            >
+              <span className="w-12 text-3xl text-[#4b6a9b] dark:text-gray-300">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </span>
+            </a>
+          </div>
         </div>
 
         <div className="m-10 flex w-full flex-wrap justify-center rounded-2xl bg-white shadow-lg dark:bg-[#1E2A47] dark:shadow-lg dark:shadow-blue-500/20 lg:w-1/2">
@@ -174,28 +199,6 @@ const Home = () => {
                 <div className="w-52">
                   <Pie data={data} />
                 </div>
-              </div>
-
-              <div
-                className={`mt-8 flex flex-row justify-center transition-all duration-500 ease-in-out`}
-              >
-                <div className="flex flex-row gap-4 transition-all duration-500 ease-in">
-                  <span className="w-12 text-3xl text-[#4b6a9b] dark:text-gray-300">
-                    <ion-icon name="mail-outline"></ion-icon>
-                  </span>
-                  {/* <span className="text-md dark:text-gray-300">
-                  russelarielucpuc@gmail.com
-                </span> */}
-                </div>
-
-                <a
-                  className="flex items-center justify-start gap-4 overflow-hidden transition-all duration-500"
-                  href="https://www.linkedin.com/in/russel-ariel-uc-puc/"
-                >
-                  <span className="w-12 text-3xl text-[#4b6a9b] dark:text-gray-300">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </span>
-                </a>
               </div>
             </div>
           )}
