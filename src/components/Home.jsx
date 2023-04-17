@@ -131,7 +131,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="m-10 flex w-full flex-wrap justify-center rounded-2xl bg-white shadow-lg dark:bg-[#1E2A47] dark:shadow-lg dark:shadow-blue-500/20 lg:w-1/2">
+        <div className="m-10 flex w-full flex-wrap justify-center rounded-2xl bg-white shadow-lg py-4 dark:bg-[#1E2A47] dark:shadow-lg dark:shadow-blue-500/20 lg:w-1/2">
           {dataProfile && (
             <div className="flex w-full flex-col">
               <span className="mt-6 text-center font-semibold dark:text-gray-200">
