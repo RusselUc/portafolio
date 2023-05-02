@@ -20,7 +20,7 @@ const Home = () => {
   const cvEn =
     "https://drive.google.com/file/d/1fjgwkkKaSJ1QgGtZqgg-kcXRdRfG1ABG/view?usp=sharing";
   const cvEs =
-    "https://drive.google.com/file/d/11fH5Uv09EdLjjY7_24_ClRb52bbVzhUc/view?usp=share_link";
+    "https://drive.google.com/file/d/1oKpOiAXuWfyTUxh0ZVPRIhF52c9evOI9/view?usp=sharing";
 
   const request = async () => {
     const response = await fetch(`https://api.github.com/users/RusselUc`);
