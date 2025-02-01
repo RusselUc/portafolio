@@ -1,29 +1,14 @@
 {
   "name": "portafolio",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "chart.js": "^4.2.1",
-    "react": "^18.2.0",
-    "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18.2.0",
-    "react-scroll": "^1.8.9"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
-    "@vitejs/plugin-react": "^3.0.0",
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.20",
-    "prettier": "^2.8.1",
-    "prettier-plugin-tailwindcss": "^0.2.1",
-    "tailwindcss": "^3.2.4",
-    "vite": "^4.0.0"
+    "astro": "^5.2.3"
   }
 }
