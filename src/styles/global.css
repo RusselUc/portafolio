@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../assets/fonts/Poppins-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Garet-Regular";
+  src: url("../assets/fonts/Garet-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Garet-Regular";
+  src: url("../assets/fonts/Garet-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Garet-Regular";
+  src: url("../assets/fonts/Garet-Thin.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Garet-Regular";
+  src: url("../assets/fonts/Garet-Medium.ttf");
+  font-weight: 500;
+}
+
+@theme {
+  --color-primary: #9490e6;
+  --color-primary-200: #cfd2f6;
+  --color-primary-300: #b2b4ef;
+  --color-secondary: #606e8b;
+  --color-secondary-600: #505c79;
+  --color-secondary-700: #424b62;
+  --color-secondary-800: #394153;
+  --color-wisteria: #a1a2eb;
+  --font-poppins: Poppins-Regular;
+  --font-garet: Garet-Regular;
+}
