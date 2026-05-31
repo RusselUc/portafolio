@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta
       name="google-site-verification"
@@ -9,42 +9,160 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Russel Uc</title>
+    <title>Russel Uc — Desarrollador FullStack</title>
+    <meta
+      name="description"
+      content="Portfolio de Russel Ariel Uc Puc, Desarrollador FullStack."
+    />
   </head>
   <body>
-    <div class="grid grid-rows-[auto_1fr_auto] min-h-dvh">
-      <header>
-        <nav
-          class="w-full h-20 bg-transparent flex items-center px-8 lg:px-24 gap-4"
-        >
-          <img src="/icon.svg" alt="icono" class="h-16 w-auto object-cover" />
-          <span class="font-poppins text-xl">Russel Uc</span>
-        </nav>
+    <div class="layout">
+      <header class="site-header">
+        <span class="nav-label">Russel UC · Dev</span>
+        <span class="nav-label muted">Portfolio / FullStack · 2026</span>
       </header>
-      <main>
+
+      <main class="site-main">
         <slot />
       </main>
-      <footer>
-        <div class="w-full h-20 bg-white flex items-center justify-center">
-          <span class="font-garet font-light text-base"
-            >© Russel Ariel Uc Puc {new Date().getFullYear()}</span
-          >
+
+      <footer class="site-footer">
+        <div class="footer-tags">
+          <span class="tag">FullStack</span>
+          <span class="tag">Frontend</span>
+          <span class="tag">Backend</span>
+          <span class="tag">Mobile</span>
         </div>
+        <a href="mailto:russelarielucpuc@gmail.com" class="cta-pill">
+          Russel UC
+        </a>
       </footer>
     </div>
   </body>
 </html>
 
 <style>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
   html,
   body {
     margin: 0;
     width: 100%;
     height: 100%;
-    background-color: #f0f3f8;
+    background-color: #ffffff;
+    color: #0a0a0a;
+  }
+
+  /* Editorial column-grid overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px
+    );
+    background-size: calc(100% / 12) 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Header ── */
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 52px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .nav-label {
+    font-family: Garet-Regular, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #0a0a0a;
+  }
+
+  .nav-label.muted {
+    color: #777777;
+  }
+
+  /* ── Main ── */
+  .site-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── Footer ── */
+  .site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 56px;
+    border-top: 1px solid #e0e0e0;
+    gap: 1rem;
+  }
+
+  .footer-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #0a0a0a;
+    border-radius: 9999px;
+    padding: 3px 12px;
+    font-family: Garet-Regular, sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #0a0a0a;
+  }
+
+  .cta-pill {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    border-radius: 9999px;
+    padding: 8px 22px;
+    font-family: Garet-Regular, sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.18s ease;
+    white-space: nowrap;
+  }
+
+  .cta-pill:hover {
+    opacity: 0.7;
+  }
+
+  @media (min-width: 1024px) {
+    .site-header,
+    .site-footer {
+      padding: 0 6rem;
+    }
   }
 </style>
-<script
-  type="module"
-  src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"
-></script>
